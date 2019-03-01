@@ -1,10 +1,5 @@
 page-home {
-    .fazam-home {
-        background: url('../assets/imgs/fazam.jpg') no-repeat;
-        background-size: cover;
-        background-size: 100% 100%;
-        
-    }    
+    
     ion-navbar.toolbar {
         min-height: 80px;
         
@@ -33,7 +28,7 @@ page-home {
     }
     
 .photo-button {
-        margin-top: 100px;
+        margin-top: 120px;
         height: 100%;
         width: 100%;
         text-align: center;
@@ -61,5 +56,20 @@ page-home {
         }
     }
 
+
+    marquee {
+        margin-top: 10px;
+        text-align: center;
+        -webkit-text-fill-color: #067486;
+        overflow: initial;
+        overflow-y: hidden;
+        white-space: initial;
+    }
+    .fazam-home {
+        background: url('../assets/imgs/fazam.jpg') no-repeat;
+        
+        background-size: 111% 111%;
+        
+    }    
 }
 
