@@ -1,0 +1,14 @@
+.tabs-md .tabbar {
+    /* background: #f8f8f8; */
+    background-image: linear-gradient(to bottom,#16BEC7,#067486);
+  }
+  .tabs-md .tab-button[aria-selected=true] {
+    color: #eff2f8;
+    padding: 0;
+  }
+
+  .tabs-md .tab-button[aria-selected=true] .tab-button-icon {
+    color: #eff2f8;
+    -webkit-transform: translate3d(0,  -2px,  0);
+    transform: translate3d(0,  -2px,  0);
+  }
