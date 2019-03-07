@@ -1,0 +1,42 @@
+
+
+#loginForm {
+    vertical-align: center;
+     text-align: center;
+     background-image: linear-gradient(to bottom,#16BEC7,#067486);
+}
+
+
+ion-row {
+    vertical-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 20em;
+}
+
+label {
+    font-size: 25px;
+    color: white;
+}
+
+.username {
+    margin-top: 60px;
+}
+
+.password {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.item-md {
+    background-color: transparent;
+}
+
+.item-input .label-md {
+    color: white;
+}
+.button-md-secondary {
+    background-color: #067486;
+}
