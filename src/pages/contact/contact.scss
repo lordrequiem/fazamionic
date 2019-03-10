@@ -1,3 +1,18 @@
 page-contact {
+    #contact-page {
+     vertical-align: center;
+     text-align: center;
+     
+     background-image: linear-gradient(to bottom,#16BEC7,#067486);
+    }
+
+    ion-icon {
+        color: white;
+    }
+
+    ion-label {
+        font-size: 18px;
+        color: white;
+    }
 
 }

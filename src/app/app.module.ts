@@ -8,6 +8,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ConnexionPage } from '../pages/connexion/connexion';
+import { Camera } from '@ionic-native/camera/ngx';
+import { ResultPage } from '../pages/result/result';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { ConnexionPage } from '../pages/connexion/connexion';
     ContactPage,
     HomePage,
     TabsPage,
-    ConnexionPage
+    ConnexionPage,
+    ResultPage
   ],
   imports: [
     BrowserModule,
@@ -27,11 +30,13 @@ import { ConnexionPage } from '../pages/connexion/connexion';
     ContactPage,
     HomePage,
     TabsPage,
-    ConnexionPage
+    ConnexionPage,
+    ResultPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
