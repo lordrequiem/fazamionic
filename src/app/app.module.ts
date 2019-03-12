@@ -1,3 +1,4 @@
+
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -10,6 +11,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ConnexionPage } from '../pages/connexion/connexion';
 import { Camera } from '@ionic-native/camera/ngx';
 import { ResultPage } from '../pages/result/result';
+import { Camera } from '@ionic-native/camera';
 
 @NgModule({
   declarations: [
