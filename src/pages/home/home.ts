@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController /*, ToastController, normalizeURL*/ } from 'ionic-angular';
-import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { Camera, CameraOptions } from '@ionic-native/camera';
 
 @Component({
   selector: 'page-home',
@@ -18,10 +18,11 @@ export class HomePage {
   
   onTakePhoto() {
     const options: CameraOptions = {
-      quality: 100,
+      quality: 70,
       destinationType: this.camera.DestinationType.FILE_URI,
       encodingType: this.camera.EncodingType.JPEG,
-      mediaType: this.camera.MediaType.PICTURE
+      mediaType: this.camera.MediaType.PICTURE,
+      saveToPhotoAlbum: true,
     }
   this.camera.getPicture(options).then((imageData) => {
 
@@ -29,31 +30,5 @@ export class HomePage {
   }, (err) => {
    // Handle error
   });
-}
-
-  
-
-  /*onTakePhoto() {
-    this.camera.getPicture({
-      destinationType: this.camera.DestinationType.FILE_URI,
-      encodingType: this.camera.EncodingType.JPEG,
-      mediaType: this.camera.MediaType.PICTURE,
-      correctOrientation: true
-    }).then(
-      (data) => {
-        if (data) {
-          this.imageUrl = normalizeURL(data);
-        }
-      }
-    ).catch(
-      (error) => {
-        this.toastCtrl.create({
-          message: error.message,
-          duration: 3000,
-          position: 'bottom'
-        }).present();
-      }
-    )
-  }*/
-
+  }
 }
