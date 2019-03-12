@@ -5,15 +5,15 @@
 
 <ion-content overflow-scroll="false" class="fazam-home">
   <ion-fab edge class="photo-button">
-    <button ion-fab mini >
-      <ion-icon name="camera" 
-      (click)="onTakePhoto()"></ion-icon>
+    <button ion-fab mini (click)="onTakePhoto()">
+      <ion-icon name="camera"></ion-icon>
     </button>
     
     <marquee scrolldelay ="120" direction="up" height="50px">
       <h2>Touchez</h2>
       <h2>pour</h2> 
         <h2>Fazamer</h2></marquee>
+        <img src="{{ myPhoto }}"/>
   </ion-fab>
 
   

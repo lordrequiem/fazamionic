@@ -1,37 +1,68 @@
 <ion-header>
-</ion-header>
-
-<ion-content padding id="loginForm">
-  <form>
-    <ion-item>
-      <ion-label fixed>Username</ion-label>
-      <ion-input type="text" value=""></ion-input>
-    </ion-item>
+ 
+  </ion-header>
   
-
-    <ion-item>
-      <ion-label fixed>Password</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-
-
-    <ion-row>
-      <ion-col text-center>
-        <button ion-button block color="secondary" (click)="onSignIn()">
-          Connexion
-        </button>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col text-center>
-        <button ion-button block color="secondary" (click)="onSignIn()">
-          Inscription
-        </button>
-      </ion-col>
-    </ion-row>
-  </form>
-
-</ion-content>
-<ion-footer>
-</ion-footer>
+  <ion-content padding id="loginForm">
+   <form>
+     <ion-item>
+       <ion-label fixed>Username</ion-label>
+       <ion-input type="text" value=""></ion-input>
+     </ion-item>
+  
+  
+     <ion-item>
+       <ion-label fixed>Password</ion-label>
+       <ion-input type="password"></ion-input>
+     </ion-item>
+  
+  
+     <ion-row>
+       <ion-col text-center>
+         <button ion-button block color="secondary" (click)="onSignIn()" style="height: 2.8em;">
+           Connexion
+         </button>
+       </ion-col>
+     </ion-row>
+     
+   </form>
+   <!--Partie inscription-->
+   <ion-fab vertical="center" horizontal="left" id="btn" >
+      <button ion-fab mini block color="secondary" style="border-radius:2px;width: 20.8em;vertical-align: center;
+      margin-left: auto;margin-right: auto;">
+        <h4>INSCRIPTION</h4>
+      </button>
+      <ion-fab-list side="end">
+          <form>
+            <ion-row>
+            <ion-item>
+                <ion-label fixed>Username</ion-label>
+                <ion-input type="text" value=""></ion-input>
+              </ion-item>
+            </ion-row>
+            <ion-row>
+              <ion-item>
+                  <ion-label fixed>Password</ion-label>
+                  <ion-input type="password"></ion-input>
+                </ion-item>
+              </ion-row>
+            <ion-row>
+                <ion-item>
+                    <ion-label fixed>Mail</ion-label>
+                    <ion-input type="text"></ion-input>
+                  </ion-item>
+                </ion-row>
+              <ion-row>
+              <ion-col text-center>
+                <button ion-button block color="secondary" (click)="onSignIn()">
+                  Valider
+                </button>
+            </ion-col>
+          </ion-row>
+          </form>
+      </ion-fab-list>
+  
+    </ion-fab>
+  
+  </ion-content>
+  <ion-footer>
+  </ion-footer>

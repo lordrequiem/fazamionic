@@ -3,7 +3,8 @@ import { NavController } from 'ionic-angular';
 
 @Component({
     selector: 'page-connexion',
-    templateUrl: 'connexion.html'
+    templateUrl: 'connexion.html',
+    
 })
 
 export class ConnexionPage {

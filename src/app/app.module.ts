@@ -9,9 +9,9 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ConnexionPage } from '../pages/connexion/connexion';
-import { Camera } from '@ionic-native/camera/ngx';
+
 import { ResultPage } from '../pages/result/result';
-import { Camera } from '@ionic-native/camera';
+import { Camera } from '@ionic-native/camera/ngx';
 
 @NgModule({
   declarations: [
@@ -37,8 +37,7 @@ import { Camera } from '@ionic-native/camera';
   ],
   providers: [
     StatusBar,
-    SplashScreen,
-    Camera,
+    SplashScreen,Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

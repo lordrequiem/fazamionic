@@ -1,42 +1,62 @@
-
-
 #loginForm {
     vertical-align: center;
      text-align: center;
      background-image: linear-gradient(to bottom,#16BEC7,#067486);
-}
-
-
-ion-row {
+ }
+ 
+ 
+ ion-row {
     vertical-align: center;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
     margin-top: 20px;
-    width: 20em;
-}
-
-label {
+    width: 21.5em;
+ }
+ 
+ label {
     font-size: 25px;
     color: white;
-}
-
-.username {
+ }
+ 
+ .username {
     margin-top: 60px;
-}
-
-.password {
+ }
+ 
+ .password {
     margin-top: 20px;
     margin-bottom: 20px;
-}
-
-.item-md {
+ }
+ 
+ .item-md {
     background-color: transparent;
-}
-
-.item-input .label-md {
+ }
+ 
+ .item-input .label-md {
     color: white;
-}
-.button-md-secondary {
+ }
+ .button-md-secondary {
     background-color: #067486;
+ }
+ #content_toggle{
+    width:100%;
+    display:block;
+ }
+ #btn{
+    margin-left:-145px;
+    margin-top:200px;
+    
+ }
+ h4{
+    padding-top:10px;
+    font-size:14px;
+ }
+ button ion-fab{
+   background-color: #067486;
+ }
+ .fab[mini] {
+   
+   
+   background-color: #067486;
+ 
 }
