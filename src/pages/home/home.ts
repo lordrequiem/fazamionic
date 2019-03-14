@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController /*, ToastController, normalizeURL*/ } from 'ionic-angular';
+import { ResultPage } from '../result/result';
+import { NavController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 
 @Component({
@@ -7,19 +8,20 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
-  myPhoto: any;
+  //HomeRoot = ResultPage;
+  myPhoto: string;
   imageUrl: string;
+  
 
-  constructor(public navCtrl: NavController/*, private toastCtrl: ToastController*/, private camera: Camera) {
+  constructor(public navCtrl: NavController, private camera: Camera) {
 
   }
 
   
-  onTakePhoto() {
+ onTakePhoto() {
     const options: CameraOptions = {
-      quality: 70,
-      destinationType: this.camera.DestinationType.FILE_URI,
+      quality: 100,
+      destinationType: this.camera.DestinationType.DATA_URL,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE,
       saveToPhotoAlbum: true,
@@ -27,8 +29,16 @@ export class HomePage {
   this.camera.getPicture(options).then((imageData) => {
 
    this.myPhoto = 'data:image/jpeg;base64,' + imageData;
+   this.navCtrl.push(ResultPage);
+
+   
+   
+
   }, (err) => {
    // Handle error
   });
   }
-}
+  
+    
+    //console.log('la eroute fct')
+   }

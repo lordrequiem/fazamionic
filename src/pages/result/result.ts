@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
+import { Camera, CameraOptions } from '@ionic-native/camera';
 
 @Component({
   selector: 'page-result',
@@ -7,8 +8,32 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class ResultPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  myPhoto: any;
+  imageUrl: string;
+
+  constructor(public navCtrl: NavController,
+              private camera: Camera) {
   }
 
+  
+  onTakePhoto() {
+    const options: CameraOptions = {
+      quality: 100,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE,
+      saveToPhotoAlbum: true,
+    }
+  this.camera.getPicture(options).then((imageData) => {
+
+   this.myPhoto = 'data:image/jpeg;base64,' + imageData;
+   
+  }, (err) => {
+   // Handle error
+  });
+  
+  }
+
+  
 
 }

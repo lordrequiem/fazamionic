@@ -2,15 +2,17 @@
     
   </ion-header>
   
-  <ion-content padding>
+<ion-content padding>
   <ion-card>
-    <img [src]="image.imagePath">
+    
     <ion-card-content>
+       
       <ion-list>
         <ion-item>
-          <p>Il s'agit de {{ celebrity.name }}</p>
+            <img [src]="myPhoto"/>
         </ion-item>
-        </ion-list>
-        </ion-card-content>
-        </ion-card>
-        </ion-content>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <p align="center">Il s'agit de <!--{{ celebrity.name }}--></p>
+</ion-content>
