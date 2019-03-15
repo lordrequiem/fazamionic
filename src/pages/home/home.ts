@@ -8,9 +8,10 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  //HomeRoot = ResultPage;
-  myPhoto: string;
+
+  myPhoto: any;
   imageUrl: string;
+
   
 
   constructor(public navCtrl: NavController, private camera: Camera) {
@@ -21,15 +22,17 @@ export class HomePage {
  onTakePhoto() {
     const options: CameraOptions = {
       quality: 100,
-      destinationType: this.camera.DestinationType.DATA_URL,
+      destinationType: this.camera.DestinationType.FILE_URI,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE,
       saveToPhotoAlbum: true,
+
     }
   this.camera.getPicture(options).then((imageData) => {
 
-   this.myPhoto = 'data:image/jpeg;base64,' + imageData;
-   this.navCtrl.push(ResultPage);
+   this.myPhoto = imageData;
+   //this.photo.push(this.myPhoto);
+   this.navCtrl.push(ResultPage, {image: this.myPhoto});
 
    
    

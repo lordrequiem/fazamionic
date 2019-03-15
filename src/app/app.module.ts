@@ -1,6 +1,7 @@
 
+
 import { NgModule, ErrorHandler } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule} from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { ContactPage } from '../pages/contact/contact';
@@ -12,6 +13,7 @@ import { ConnexionPage } from '../pages/connexion/connexion';
 
 import { ResultPage } from '../pages/result/result';
 import { Camera } from '@ionic-native/camera';
+
 
 @NgModule({
   declarations: [
