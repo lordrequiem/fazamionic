@@ -3,8 +3,8 @@
 </ion-header>
 
 <ion-content padding id="contact-page">
-  <ion-list id="contact-elements">
-    <ion-list-header>Visitez notre site web</ion-list-header>
+ 
+
     <ion-row>
       <ion-col text-center>
         <button ion-button block color="secondary" >
@@ -12,20 +12,24 @@
         </button>
       </ion-col>
     </ion-row>
-    <ion-item>
+    <ion-row style="margin-top:50px">
+    <ion-item class="leftneg">
       <ion-icon name="logo-twitter" item-start></ion-icon>
-      <ion-label>@fazamtw pour nous retrouver sur Twitter</ion-label>
+      <a href="">@fazamtw sur Twitter</a>
     </ion-item>
-    <ion-item>
+    <ion-item class="leftneg">
         <ion-icon name="logo-facebook" item-start></ion-icon>
-        @fazamfb pour nous retrouver sur Facebook
+       <a href="">@fazamfb sur Facebook</a>
       </ion-item>
-      <ion-item>
+      <ion-item class="leftneg">
           <ion-icon name="logo-instagram" item-start></ion-icon>
-          @fazamin pour nous retrouver sur Instagram
+          <a href="">@fazamin sur Instagram</a>
         </ion-item>
-  </ion-list>
-  <img src="../assets/imgs/logo.svg"/>
+    </ion-row>
+    <div class="imgF">
+      <img class="logo" src="../assets/imgs/logo.svg"/>
+      <p class="copy">&copy; Fazam 2019. All Rights Reserved.</p>
+    </div>
 </ion-content>
 
 <ion-footer>

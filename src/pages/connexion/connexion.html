@@ -26,12 +26,13 @@
      
    </form>
    <!--Partie inscription-->
+   <ion-row>
    <ion-fab vertical="center" horizontal="left" id="btn" >
-      <button ion-fab mini block color="secondary" style="border-radius:2px;width: 20.8em;vertical-align: center;
-      margin-left: auto;margin-right: auto;">
+      <button ion-fab mini block color="secondary" style="border-radius:2px;width: 20.8em;vertical-align: center;margin-left: 150px;
+      margin-top: -200px;">
         <h4>INSCRIPTION</h4>
       </button>
-      <ion-fab-list side="end">
+      <ion-fab-list side="end" class="list">
           <form>
             <ion-row>
             <ion-item>
@@ -53,7 +54,7 @@
                 </ion-row>
               <ion-row>
               <ion-col text-center>
-                <button ion-button block color="secondary" (click)="onSignIn()">
+                <button ion-button block color="secondary" (click)="onSignIn()" style="margin-left:2px">
                   Valider
                 </button>
             </ion-col>
@@ -62,7 +63,7 @@
       </ion-fab-list>
   
     </ion-fab>
-  
+   </ion-row>
   </ion-content>
   <ion-footer>
   </ion-footer>

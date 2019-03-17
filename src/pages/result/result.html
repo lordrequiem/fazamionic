@@ -1,21 +1,18 @@
 <ion-header>
     
-  </ion-header>
-  
+</ion-header>
+
 <ion-content padding>
   <ion-card>
-    
-    <ion-card-content>
-        <ion-img src="{{test}}"></ion-img>
-      <ion-list>
-        <ion-item>
-            
-        </ion-item>
-      </ion-list>
-    </ion-card-content>
+    <img src="{{test}}">
+    <br>
   </ion-card>
-
-  <p>{{test}}</p>
-  <p align="center">Il s'agit de <!--{{ celebrity.name }}--></p>
-  
+  <ion-card>
+      <ion-card-content>
+          <p>Il s'agit de <!--{{ celebrity.name }}--></p>
+          <p>Description: <!--{{ celebrity.description }}--></p>
+          <p>Filmographie: <!--{{ celebrity.filmes }}--></p> 
+        </ion-card-content>
+  </ion-card>
+    <!--<p>{{test}}</p>-->
 </ion-content>
