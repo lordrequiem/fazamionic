@@ -36,7 +36,7 @@ export class HomePage {
         this.camera.getPicture(options).then((imageData) => {
           
         this.myPhoto = "data:image/jpeg;base64," + imageData;
-        //this.writeFile(myPhoto, “My Picture”, “sample.jpeg”);  
+      
         
         this.navCtrl.push(ResultPage, {image: this.myPhoto});
 
