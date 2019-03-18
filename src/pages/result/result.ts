@@ -10,6 +10,7 @@ export class ResultPage implements OnInit {
 
   imageUrl: string;
   test: string;
+  test2: string;
 
   ngOnInit(): void {
     this.test = this.navParams.get('image');
@@ -18,6 +19,8 @@ export class ResultPage implements OnInit {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
               
                this.test = this.navParams.get('image');
+               //this.test2 = path(this.test);
+               
   }
  
 }

@@ -1,6 +1,24 @@
 page-result {
 
+    .result-content{
+        background-image: linear-gradient(to bottom,#16BEC7,#067486);
+    }
+
     ion-card {
         height: 280px;
+        border: #067486 solid 2px;
+   
+    }
+
+    h1{
+        color:white;
+        text-align: center;
+        margin-top: 35px;
+        background-color:#067486;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        height: 50px;
+        font-size:18px;
+        padding-top:15px;
+       
     }
 }
