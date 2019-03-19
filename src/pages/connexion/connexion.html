@@ -33,28 +33,29 @@
         <h4>INSCRIPTION</h4>
       </button>
       <ion-fab-list side="end" class="list">
-          <form>
+          <form (ngSubmit)="loginForm()">
             <ion-row>
             <ion-item>
                 <ion-label fixed>Username</ion-label>
-                <ion-input type="text" value=""></ion-input>
+                <!--[(ngModel)]="form.name"  [(ngModel)]="form.mdp" [(ngModel)]="form.mail"-->
+                <ion-input type="text" id="a" name="name" ></ion-input>
               </ion-item>
             </ion-row>
             <ion-row>
               <ion-item>
                   <ion-label fixed>Password</ion-label>
-                  <ion-input type="password"></ion-input>
+                  <ion-input type="password" id="b" name="password" ></ion-input>
                 </ion-item>
               </ion-row>
             <ion-row>
                 <ion-item>
                     <ion-label fixed>Mail</ion-label>
-                    <ion-input type="text"></ion-input>
+                    <ion-input type="text" id="c" name="mail" ></ion-input>
                   </ion-item>
                 </ion-row>
               <ion-row>
               <ion-col text-center>
-                <button ion-button block color="secondary" (click)="onSignIn()" style="margin-left:2px">
+                <button ion-button block color="secondary" type="submit" style="margin-left:2px">
                   Valider
                 </button>
             </ion-col>

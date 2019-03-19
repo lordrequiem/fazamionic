@@ -13,6 +13,8 @@ import { ConnexionPage } from '../pages/connexion/connexion';
 
 import { ResultPage } from '../pages/result/result';
 import { Camera } from '@ionic-native/camera';
+import RegisterService from '../services/registerServices';
+import { HttpClient } from '@angular/common/http';
 
 
 @NgModule({
@@ -39,7 +41,7 @@ import { Camera } from '@ionic-native/camera';
   ],
   providers: [
     StatusBar,
-    SplashScreen,Camera,
+    SplashScreen,Camera,RegisterService,HttpClient,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
