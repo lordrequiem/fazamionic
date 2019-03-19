@@ -20,7 +20,7 @@ export class ConnexionPage {
 
     }
 
-    /*loginForm() {
+    /*register() {
         console.log(this.form);
         const obs = this.api.sendUser(this.form);
         obs.subscribe(

@@ -11,9 +11,9 @@ export default class RegisterService {
 
     }
 
-    sendUser(login: Object) {
+    sendUser(register: Object) {
         return this.http
-           .post(this.apiUrl, login)
+           .post(this.apiUrl, register)
             
     };
     
