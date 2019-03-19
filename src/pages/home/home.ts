@@ -2,7 +2,7 @@ import { Component} from '@angular/core';
 import { ResultPage } from '../result/result';
 import { NavController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
-//import imageService from '../../services/imageServices';
+//import ImageService from '../../services/imageServices';
 
 
 
@@ -17,7 +17,7 @@ export class HomePage {
 
   
 
-  constructor(public navCtrl: NavController, private camera: Camera/*, private api: imageService*/) {
+  constructor(public navCtrl: NavController, private camera: Camera/*, private api: ImageService*/) {
 
   }
 
