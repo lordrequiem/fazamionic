@@ -8,7 +8,13 @@
     "start": "ionic-app-scripts serve",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
-    "lint": "ionic-app-scripts lint"
+    "lint": "ionic-app-scripts lint",
+    "watch": "ionic-app-scripts watch",
+    "serve:before": "watch",
+    "emulate:before": "watch",
+    "deploy:before": "build",
+    "build:before": "build",
+    "run:before": "watch"
   },
   "dependencies": {
     "@angular/animations": "5.2.11",
