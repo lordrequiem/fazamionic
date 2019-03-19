@@ -2,6 +2,7 @@ import { Component} from '@angular/core';
 import { ResultPage } from '../result/result';
 import { NavController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+//import imageService from '../../services/imageServices';
 
 
 
@@ -16,7 +17,7 @@ export class HomePage {
 
   
 
-  constructor(public navCtrl: NavController, private camera: Camera) {
+  constructor(public navCtrl: NavController, private camera: Camera/*, private api: imageService*/) {
 
   }
 
@@ -36,7 +37,15 @@ export class HomePage {
         this.camera.getPicture(options).then((imageData) => {
           
         this.myPhoto = "data:image/jpeg;base64," + imageData;
-      
+        
+         /* console.log(this.myPhoto);
+          const obs = this.api.sendImage(this.myPhoto);
+          obs.subscribe(
+            (response) => {
+              console.log(response);
+              return response;
+            });*/
+       
         
         this.navCtrl.push(ResultPage, {image: this.myPhoto});
 

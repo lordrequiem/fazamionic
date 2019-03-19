@@ -15,6 +15,7 @@ import { ResultPage } from '../pages/result/result';
 import { Camera } from '@ionic-native/camera';
 import RegisterService from '../services/registerServices';
 import { HttpClient } from '@angular/common/http';
+import imageService from '../services/imageServices';
 
 
 @NgModule({
@@ -41,7 +42,7 @@ import { HttpClient } from '@angular/common/http';
   ],
   providers: [
     StatusBar,
-    SplashScreen,Camera,RegisterService,HttpClient,
+    SplashScreen,Camera,RegisterService,HttpClient,imageService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
