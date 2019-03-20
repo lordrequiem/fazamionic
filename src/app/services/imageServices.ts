@@ -4,16 +4,16 @@ import { HttpClient} from '@angular/common/http';
 
 
 @Injectable()
-export default class RegisterService {
-    private apiUrl = 'http://localhost:8100';
+export default class ImageService {
+    private apiUrl = 'http://localhost:8188';
 
     constructor(private http: HttpClient) {
 
     }
 
-    sendUser(register: Object) {
+    sendImage(image: Object) {
         return this.http
-           .post(this.apiUrl, register)
+           .post(this.apiUrl, image)
             
     };
     
