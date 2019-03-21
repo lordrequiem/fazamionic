@@ -12,10 +12,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ConnexionPage } from '../pages/connexion/connexion';
 
 import { ResultPage } from '../pages/result/result';
-import { Camera } from '@ionic-native/camera';
-import RegisterService from '../services/registerServices';
-import { HttpClient } from '@angular/common/http';
-import ImageService from '../services/imageServices';
+import { Camera, CameraOptions } from '@ionic-native/camera';
+
+import RegisterService from '../app/services/registerServices';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import ImageService from '../app/services/imageServices';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import ImageService from '../services/imageServices';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
