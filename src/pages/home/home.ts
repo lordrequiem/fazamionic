@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-// import { ResultPage } from '../result/result';
+import { ResultPage } from '../result/result';
 import { NavController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { HttpClient } from '@angular/common/http';
@@ -12,7 +12,7 @@ export class HomePage {
   myPhoto: any;
   imageUrl: string;
 
-  constructor(public navCtrl: NavController, private camera: Camera, public http: HttpClient) {
+  constructor(private navCtrl: NavController, private camera: Camera, private http: HttpClient) {
   }
 
   onTakePhoto() {
@@ -30,19 +30,13 @@ export class HomePage {
     this.camera.getPicture(options).then((imageData) => {
       this.myPhoto = "data:image/jpeg;base64," + imageData;
 
-      this.http.post(
-        'http://192.168.43.106:8888/upload',
-        { file: this.myPhoto }
-        //   {
-        //   headers: {
-        //       "Access-Control-Allow-Origin": "*",
-        //       "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, OPTIONS",}
-        //   }).subscribe(res=>{
-        //   console.log(res);
-        //   this.navCtrl.push(ResultPage, {image: this.myPhoto});
-        // }
-      );
+      console.log("ok")
+      this.http
+        .post('http://192.168.43.4:8888/upload', { file: this.myPhoto })
+        .subscribe(r => { console.log(r) });
+        this.navCtrl.push(ResultPage, {image: this.myPhoto});
     },
-      (err) => { });
+      err => { console.log(err) }
+    );
   }
 }
