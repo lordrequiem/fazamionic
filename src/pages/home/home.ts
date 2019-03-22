@@ -23,8 +23,8 @@ export class HomePage {
       mediaType: this.camera.MediaType.PICTURE,
       correctOrientation: true,
       saveToPhotoAlbum: true,
-      targetWidth: 500,
-      targetHeight: 500,
+      targetWidth: 1000,
+      targetHeight: 1000,
     }
 
     this.camera.getPicture(options).then((imageData) => {
@@ -32,7 +32,7 @@ export class HomePage {
 
       console.log("ok")
       this.http
-        .post('http://192.168.43.4:8888/upload', { file: this.myPhoto })
+        .post('http://192.168.43.84:8888/upload', { file: this.myPhoto })
         .subscribe(r => { console.log(r) });
         this.navCtrl.push(ResultPage, {image: this.myPhoto});
     },
