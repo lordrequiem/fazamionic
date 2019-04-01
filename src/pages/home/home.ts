@@ -9,34 +9,40 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  myPhoto: any;
   imageUrl: string;
+
+  camOptions: CameraOptions = {
+    quality: 100,
+    destinationType: this.camera.DestinationType.DATA_URL,
+    encodingType: this.camera.EncodingType.JPEG,
+    mediaType: this.camera.MediaType.PICTURE,
+    correctOrientation: true,
+    saveToPhotoAlbum: true,
+    targetWidth: 1000,
+    targetHeight: 1000,
+  }
 
   constructor(private navCtrl: NavController, private camera: Camera, private http: HttpClient) {
   }
 
   onTakePhoto() {
-    const options: CameraOptions = {
-      quality: 100,
-      destinationType: this.camera.DestinationType.DATA_URL,
-      encodingType: this.camera.EncodingType.JPEG,
-      mediaType: this.camera.MediaType.PICTURE,
-      correctOrientation: true,
-      saveToPhotoAlbum: true,
-      targetWidth: 1000,
-      targetHeight: 1000,
-    }
+    this.camera.getPicture(this.camOptions).then((imageData) => {
 
-    this.camera.getPicture(options).then((imageData) => {
-      this.myPhoto = "data:image/jpeg;base64," + imageData;
+      let myPhoto = "data:image/jpeg;base64," + imageData;
 
-      console.log("ok")
       this.http
-        .post('http://192.168.43.84:8888/upload', { file: this.myPhoto })
-        .subscribe(r => { console.log(r) });
-        this.navCtrl.push(ResultPage, {image: this.myPhoto});
+        .post('http://192.168.43.97:8888/upload', { file: myPhoto })
+        .subscribe((r) => {
+          this.navCtrl.push(ResultPage, {
+            image: myPhoto,
+            result: r
+          });
+        });
+
     },
-      err => { console.log(err) }
+      err => {
+        console.log(err)
+      }
     );
   }
 }
