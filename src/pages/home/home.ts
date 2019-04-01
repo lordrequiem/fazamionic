@@ -18,8 +18,8 @@ export class HomePage {
     mediaType: this.camera.MediaType.PICTURE,
     correctOrientation: true,
     saveToPhotoAlbum: true,
-    targetWidth: 1000,
-    targetHeight: 1000,
+    targetWidth: 500,
+    targetHeight: 500,
   }
 
   constructor(private navCtrl: NavController, private camera: Camera, private http: HttpClient) {

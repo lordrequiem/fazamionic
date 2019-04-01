@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { HttpClient } from '@angular/common/http';
-import { ChangeDetectorRef } from "@angular/core";
+
 
 @Component({
   selector: 'page-result',
@@ -17,7 +16,7 @@ export class ResultPage implements OnInit {
 
   }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private http: HttpClient, private cd: ChangeDetectorRef) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.imgBase64 = this.navParams.get('image');
     this.result = this.navParams.get('result');
   }

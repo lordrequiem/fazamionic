@@ -12,7 +12,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ConnexionPage } from '../pages/connexion/connexion';
 
 import { ResultPage } from '../pages/result/result';
-import { Camera, CameraOptions } from '@ionic-native/camera';
+import { Camera } from '@ionic-native/camera';
 
 import RegisterService from '../app/services/registerServices';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
